@@ -1,0 +1,35 @@
+{
+  "name": "inactive-user-sample",
+  "version": "1.0.0",
+  "description": "Inactive organization users",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "buildd": "ncc build index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meiyanathanj/inactive-user-sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meiyanathanj/inactive-user-sample/issues"
+  },
+  "homepage": "https://github.com/meiyanathanj/inactive-user-sample#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/io": "^1.0.2",
+    "@octokit/plugin-retry": "^3.0.4",
+    "@octokit/plugin-throttling": "^3.3.3",
+    "@octokit/rest": "^18.0.9",
+    "json2csv": "^5.0.4"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.25.1",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}

@@ -1,0 +1,44 @@
+name: GitHub Organization User Activity
+description: A summary of user activity for an organization
+author: ManiKandan
+
+inputs:
+  token:
+    description: GitHub Access Token.
+    required: true
+
+  outputDir:
+    description: The output directory for the report.
+    required: true
+    default: ${{ github.workspace }}
+
+  organization:
+    description: The organization name.
+    required: true
+
+  since:
+    description: A date time in format YYYY-MM-DDTHH:mm:ss. If specified activity_days will be ignored.
+    required: false
+
+  activity_days:
+    description: The number of days in the past to check for activity, this will be ignored if 'since' parameter is used.
+    required: true
+    default: 30
+  
+  remove_flag:
+    description: Remove flag is used to remove inactive user from organization.'Yes' indicate deletion action, 'No' indicate skip deletion process.
+    required: true
+    default: No
+
+  octokit_max_retries:
+    description: Maximum number of retires when using the Octokit REST API
+    required: true
+    default: 15
+
+runs:
+  using: node12
+  main: dist/index.js
+
+branding:
+  icon: users
+  color: orange
